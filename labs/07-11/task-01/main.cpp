@@ -105,7 +105,7 @@ void Initialize()
 	idProgram = glCreateProgram();
 	glAttachShader( idProgram, LoadShader(GL_VERTEX_SHADER, "vertex.glsl"));
 	glAttachShader( idProgram, LoadShader(GL_FRAGMENT_SHADER, "fragment.glsl"));
-	LinkAndValidateProgram( idProgram );
+	glLinkProgram( idProgram );
 
 
 	// 2. Vertex arrays

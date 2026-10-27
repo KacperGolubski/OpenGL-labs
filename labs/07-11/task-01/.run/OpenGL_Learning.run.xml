@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration name="OpenGL_Learning" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$CMakeCurrentLocalGenerationDir$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OpenGL_Learning" TARGET_NAME="OpenGL_Learning" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="OpenGL_Learning" RUN_TARGET_NAME="OpenGL_Learning">
+    <method v="2">
+      <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+    </method>
+  </configuration>
+</component>
