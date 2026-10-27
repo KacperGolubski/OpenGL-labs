@@ -1,0 +1,47 @@
+# Ustawienia lokalne CLion (we wszystkich zadaniach)
+.idea/
+*.iml
+
+# Katalogi kompilacji CMake / CLion (we wszystkich zadaniach)
+cmake-build-*/
+build/
+build-*/
+
+# Pliki generowane przez CMake przy budowaniu w katalogu źródeł
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+Testing/
+compile_commands.json
+install_manifest.txt
+CMakeUserPresets.json
+
+# Pliki wynikowe i dane debugowania
+*.o
+*.obj
+*.exe
+*.pdb
+*.ilk
+*.dSYM/
+OpenGL_Learning
+
+# Pliki systemowe macOS / Windows
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Lokalne sekrety i klucze uwierzytelniające
+.env
+.env.*
+!.env.example
+.ssh/
+id_rsa*
+id_dsa*
+id_ecdsa*
+id_ed25519*
+*.pem
+*.key
+*.p12
+*.pfx
