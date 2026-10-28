@@ -10,7 +10,7 @@ find_package(glfw3 CONFIG REQUIRED)
 add_executable(OpenGL_Learning
         main.cpp
         Libraries/src/glad.c
-        house.h
+        co-to-jest.h
 )
 
 target_include_directories(OpenGL_Learning PRIVATE
