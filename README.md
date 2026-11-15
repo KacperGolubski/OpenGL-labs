@@ -10,6 +10,7 @@ Small graphics programs built while learning C++, OpenGL and GLSL.
 | [07.11 — Task 01](labs/07-11/task-01/) | Indexed rendering of the object from `co-to-jest.h` with random vertex colors | Esc: exit |
 | [07.11 — Task 02](labs/07-11/task-02/) | Scene switching and matrix-based house rotation around the X, Y and Z axes | Space: switch scenes · W/S: rotate around X · D/A: rotate around Y · Q/E: rotate around Z · Esc: exit |
 | [07.11 — Task 03](labs/07-11/task-03/) | Indexed rendering of object A and two copies of object B with independent transformations | A/D: rotate object A around Z · W/S: scale one copy of object B · Esc: exit |
+| [07.11 — Task 04](labs/07-11/task-04/) | Four viewports displaying the same object with different shader transformations | Esc: exit |
 
 ## Requirements
 
