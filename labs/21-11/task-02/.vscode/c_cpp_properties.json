@@ -1,0 +1,8 @@
+{
+    "configurations": [
+        {
+            "name": "macOS",
+            "compileCommands": "${workspaceFolder}/build-task-02/compile_commands.json"        }
+    ],
+    "version": 4
+}

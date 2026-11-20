@@ -1,0 +1,18 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build OpenGL project",
+            "command": "cmake -S \"${workspaceFolder}\" -B \"${workspaceFolder}/build-task-02\" && cmake --build \"${workspaceFolder}/build-task-02\"",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": "$gcc",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "version": "2.0.0"
+}
