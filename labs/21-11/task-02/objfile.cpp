@@ -19,6 +19,7 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
+#include <filesystem>
 #include <iostream>
 #include <vector>
 
@@ -141,7 +142,7 @@ void DisplayScene()
 }
 
 // ---------------------------------------
-void Initialize()
+void Initialize(const std::filesystem::path& assetDirectory)
 {
 
 	// Ustawianie koloru, ktorym bedzie czyszczony bufor koloru
@@ -157,19 +158,19 @@ void Initialize()
 
 	// Wczytywanie danych z plikow OBJ
 
-	if (!Monkey.LoadMesh("monkey.obj")) {
+	if (!Monkey.LoadMesh((assetDirectory / "monkey.obj").string())) {
 		std::cerr << "Failed to load monkey.obj" << std::endl;
 		exit(EXIT_FAILURE);
 	}
-	if (!Cone.LoadMesh("cone.obj")) {
+	if (!Cone.LoadMesh((assetDirectory / "cone.obj").string())) {
 		std::cerr << "Failed to load cone.obj" << std::endl;
 		exit(EXIT_FAILURE);
 	}
 
 	// Potok
 	program.CreateProgram();
-	program.AttachShaderVertexShader("vertex.glsl");
-	program.AttachShaderFragmentShader("fragment.glsl");
+	program.AttachShaderVertexShader((assetDirectory / "vertex.glsl").string());
+	program.AttachShaderFragmentShader((assetDirectory / "fragment.glsl").string());
 
 	// Buffory dla malpki
 	Monkey.CoordBuffer();
@@ -276,7 +277,7 @@ int main( int argc, char *argv[] )
 
 
 	// Inicjalizacja sceny
-	Initialize();
+	Initialize(std::filesystem::canonical(argv[0]).parent_path());
 
 
 	// Glowna petla

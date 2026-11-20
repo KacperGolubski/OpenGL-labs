@@ -27,16 +27,17 @@ target_link_libraries(OpenGL_Learning PRIVATE
         OpenGL::GL
 )
 
-file(GLOB SHADER_FILES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/*.glsl")
-add_custom_target(copy_shaders
-        COMMAND ${CMAKE_COMMAND} -E copy_if_different ${SHADER_FILES} "$<TARGET_FILE_DIR:OpenGL_Learning>"
+set(SCENE_ASSETS
+        "${CMAKE_CURRENT_SOURCE_DIR}/vertex.glsl"
+        "${CMAKE_CURRENT_SOURCE_DIR}/fragment.glsl"
+        "${CMAKE_CURRENT_SOURCE_DIR}/terrain.obj"
+        "${CMAKE_CURRENT_SOURCE_DIR}/rock.obj"
+        "${CMAKE_CURRENT_SOURCE_DIR}/palm.obj"
+        "${CMAKE_CURRENT_SOURCE_DIR}/bark.obj"
+        "${CMAKE_CURRENT_SOURCE_DIR}/grass.obj"
+)
+add_custom_target(copy_scene_assets
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different ${SCENE_ASSETS} "$<TARGET_FILE_DIR:OpenGL_Learning>"
         VERBATIM
 )
-add_dependencies(OpenGL_Learning copy_shaders)
-
-add_custom_command(TARGET OpenGL_Learning POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy_if_different
-                "${CMAKE_CURRENT_SOURCE_DIR}/monkey.obj"
-                "$<TARGET_FILE_DIR:OpenGL_Learning>/monkey.obj"
-        VERBATIM
-)
+add_dependencies(OpenGL_Learning copy_scene_assets)

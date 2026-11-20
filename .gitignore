@@ -20,6 +20,16 @@ CMakeUserPresets.json
 # Pliki wynikowe i dane debugowania
 *.o
 *.obj
+
+# Modele Wavefront OBJ używane przez zadania z 21.11
+!/labs/21-11/task-01/bark.obj
+!/labs/21-11/task-01/grass.obj
+!/labs/21-11/task-01/palm.obj
+!/labs/21-11/task-01/rock.obj
+!/labs/21-11/task-01/terrain.obj
+!/labs/21-11/task-02/cone.obj
+!/labs/21-11/task-02/monkey.obj
+
 *.exe
 *.pdb
 *.ilk

@@ -19,6 +19,7 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
+#include <filesystem>
 #include <iostream>
 #include <vector>
 
@@ -209,7 +210,7 @@ void DisplayScene()
 }
 
 // ---------------------------------------
-void Initialize()
+void Initialize(const std::filesystem::path& assetDirectory)
 {
 
 	// Ustawianie koloru, ktorym bedzie czyszczony bufor koloru
@@ -225,35 +226,35 @@ void Initialize()
 
 	// Wczytywanie danych z plikow OBJ
 
-	if(!ground.LoadMesh("terrain.obj"))
+	if(!ground.LoadMesh((assetDirectory / "terrain.obj").string()))
 	{
 		printf("File not loaded!\n");
 	}
 	
-	if(!rock.LoadMesh("rock.obj"))
+	if(!rock.LoadMesh((assetDirectory / "rock.obj").string()))
 	{
 		printf("File not loaded!\n");
 	}
 
-	if(!palm.LoadMesh("palm.obj"))
+	if(!palm.LoadMesh((assetDirectory / "palm.obj").string()))
 	{
 		printf("File not loaded!\n");
 	}
 
-	if(!bark.LoadMesh("bark.obj"))
+	if(!bark.LoadMesh((assetDirectory / "bark.obj").string()))
 	{
 		printf("File not loaded!\n");
 	}
 
-	if(!grass.LoadMesh("grass.obj"))
+	if(!grass.LoadMesh((assetDirectory / "grass.obj").string()))
 	{
 		printf("File not loaded!\n");
 	}
 
 	// Potok
 	program.CreateProgram();
-	program.AttachShaderVertexShader("vertex.glsl");
-	program.AttachShaderFragmentShader("fragment.glsl");
+	program.AttachShaderVertexShader((assetDirectory / "vertex.glsl").string());
+	program.AttachShaderFragmentShader((assetDirectory / "fragment.glsl").string());
 
 
 	// Buffory dla kamienia
@@ -376,7 +377,7 @@ int main( int argc, char *argv[] )
 
 
 	// Inicjalizacja sceny
-	Initialize();
+	Initialize(std::filesystem::canonical(argv[0]).parent_path());
 
 
 	// Glowna petla

@@ -35,4 +35,4 @@ cmake --build build
 ./build/OpenGL_Learning
 ```
 
-Run the executable with the project directory as the working directory so it can find the GLSL files. Both 21.11 tasks also load OBJ models.
+For the 21.11 tasks, CMake copies the required GLSL and OBJ files next to the executable. Run either executable by its path from any working directory. For earlier tasks, use the task directory as the working directory so the executable can find the GLSL files.
