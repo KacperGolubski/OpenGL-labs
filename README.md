@@ -12,13 +12,14 @@ Small graphics programs built while learning C++, OpenGL and GLSL.
 | [07.11 — Task 03](labs/07-11/task-03/) | Indexed rendering of object A and two copies of object B with independent transformations | A/D: rotate object A around Z · W/S: scale one copy of object B · Esc: exit |
 | [07.11 — Task 04](labs/07-11/task-04/) | Four viewports displaying the same object with different shader transformations | Esc: exit |
 | [21.11 — Task 01](labs/21-11/task-01/) | 3D scene with OBJ models, colored meshes, repeated grass and two rotating rocks | W/S: rotate around X · A/D: rotate around Y · left mouse drag: rotate · =/− or scroll: move scene closer/farther · Esc: exit |
+| [21.11 — Task 02](labs/21-11/task-02/) | Animated OBJ scene with a spinning monkey and four cones orbiting it | W/S: rotate around X · A/D: rotate around Y · left mouse drag: rotate · =/− or scroll: move scene closer/farther · Esc: exit |
 
 ## Requirements
 
 - C++20 compiler
 - CMake 3.20+
 - GLFW 3
-- GLM (used for transformations in 21.11 — Task 01)
+- GLM (used in the 21.11 tasks)
 - OpenGL 3.3 Core Profile
 
 GLAD is included in each project.
@@ -34,4 +35,4 @@ cmake --build build
 ./build/OpenGL_Learning
 ```
 
-Run the executable with the project directory as the working directory so it can find the GLSL files. Task 21.11 also loads its OBJ models from the working directory.
+Run the executable with the project directory as the working directory so it can find the GLSL files. Both 21.11 tasks also load OBJ models.
