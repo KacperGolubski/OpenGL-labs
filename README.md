@@ -13,13 +13,14 @@ Small graphics programs built while learning C++, OpenGL and GLSL.
 | [07.11 — Task 04](labs/07-11/task-04/) | Four viewports displaying the same object with different shader transformations | Esc: exit |
 | [21.11 — Task 01](labs/21-11/task-01/) | 3D scene with OBJ models, colored meshes, repeated grass and two rotating rocks | W/S: rotate around X · A/D: rotate around Y · left mouse drag: rotate · =/− or scroll: move scene closer/farther · Esc: exit |
 | [21.11 — Task 02](labs/21-11/task-02/) | Animated OBJ scene with a spinning monkey and four cones orbiting it | W/S: rotate around X · A/D: rotate around Y · left mouse drag: rotate · =/− or scroll: move scene closer/farther · Esc: exit |
+| [28.11 — Task 01](labs/28-11/task-01/) | A square formed by two triangles with UV coordinates mapping a texture across the whole surface. Two additional textures are combined with the base texture in the fragment shader using `mix` and their alpha channels. | left mouse drag: rotate · scroll: move scene closer/farther · Esc: exit |
 
 ## Requirements
 
 - C++20 compiler
 - CMake 3.20+
 - GLFW 3
-- GLM (used in the 21.11 tasks)
+- GLM (used in the 21.11 and 28.11 tasks)
 - OpenGL 3.3 Core Profile
 
 GLAD is included in each project.
@@ -35,4 +36,4 @@ cmake --build build
 ./build/OpenGL_Learning
 ```
 
-For the 21.11 tasks, CMake copies the required GLSL and OBJ files next to the executable. Run either executable by its path from any working directory. For earlier tasks, use the task directory as the working directory so the executable can find the GLSL files.
+For the 21.11 and 28.11 tasks, CMake copies the required GLSL files and scene assets (OBJ models or textures) next to the executable. Run each executable by its path from any working directory. For earlier tasks, use the task directory as the working directory so the executable can find the GLSL files.
