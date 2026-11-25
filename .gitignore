@@ -30,6 +30,11 @@ CMakeUserPresets.json
 !/labs/21-11/task-02/cone.obj
 !/labs/21-11/task-02/monkey.obj
 
+# Modele Wavefront OBJ uzywane przez zadanie 28.11
+!/labs/28-11/task-02/cone.obj
+!/labs/28-11/task-02/cube.obj
+!/labs/28-11/task-02/monkey.obj
+
 *.exe
 *.pdb
 *.ilk

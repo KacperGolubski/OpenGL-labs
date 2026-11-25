@@ -14,6 +14,7 @@ Small graphics programs built while learning C++, OpenGL and GLSL.
 | [21.11 — Task 01](labs/21-11/task-01/) | 3D scene with OBJ models, colored meshes, repeated grass and two rotating rocks | W/S: rotate around X · A/D: rotate around Y · left mouse drag: rotate · =/− or scroll: move scene closer/farther · Esc: exit |
 | [21.11 — Task 02](labs/21-11/task-02/) | Animated OBJ scene with a spinning monkey and four cones orbiting it | W/S: rotate around X · A/D: rotate around Y · left mouse drag: rotate · =/− or scroll: move scene closer/farther · Esc: exit |
 | [28.11 — Task 01](labs/28-11/task-01/) | A square formed by two triangles with UV coordinates mapping a texture across the whole surface. Two additional textures are combined with the base texture in the fragment shader using `mix` and their alpha channels. | left mouse drag: rotate · scroll: move scene closer/farther · Esc: exit |
+| [28.11 — Task 02](labs/28-11/task-02/) | A cube loaded from an OBJ file and covered with a paper texture. The fragment shader uses `discard` to cut holes at the red spots based on their RGB values. | W/S: rotate around X · A/D: rotate around Y · left mouse drag: rotate · =/− or scroll: move scene closer/farther · Esc: exit |
 
 ## Requirements
 
